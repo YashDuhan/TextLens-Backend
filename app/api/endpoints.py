@@ -58,7 +58,7 @@ async def upload_pdf(
 async def ask_question(request: AskQuestionRequest):
     try:
         completion = client.chat.completions.create(
-            model="llama-3.2-90b-text-preview",
+            model="llama-3.2-90b-vision-preview",
             messages=[
                 {"role": "user", "content": f"Context: {request.extracted_text}"},
                 {"role": "user", "content": f"Question: {request.question}"},
